@@ -1,18 +1,10 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Image, TextInput, Button, Alert} from 'react-native';
-import {createStackNavigator} from 'react-navigation';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
 
 export default class Login extends Component {
 
   _onPressLoginButton() {
-    // navigate('HomeScreen', {name: 'Jane'})
+    //this.props.navigation.navigate('Home');
     Alert.alert('You tapped the Login!')
   }
 
@@ -28,8 +20,6 @@ export default class Login extends Component {
     let pic = {
       uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
     };
-
-    // const {navigate} = this.props.navigation;
 
     return (
 

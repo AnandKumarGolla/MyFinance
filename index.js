@@ -9,4 +9,4 @@ import AddCustomer from './src/screens/AddCustomer';
 
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => AddCustomer);
+AppRegistry.registerComponent(appName, () => App);
