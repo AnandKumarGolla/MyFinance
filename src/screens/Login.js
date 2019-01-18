@@ -9,7 +9,21 @@ export default class Login extends Component {
       userName: '',
       password: ''
     }
+
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
   }
+
+  handleNameChange(e) {
+    this.setState({
+      userName: e.nativeEvent.text
+    });
+  }
+  handlePasswordChange(e) {
+      this.setState({
+        password: e.nativeEvent.text
+      });
+    }
 
   _onPressLoginButton=() => {
     this.props.navigation.navigate('Home');
@@ -26,7 +40,7 @@ export default class Login extends Component {
             <Text style={styles.title}>User Name</Text>
             <TextInput
                   style={styles.itemInput}
-                onChange={(text) => this.setState({userName})}
+                  onChange={this.handleNameChange}
                 />
             </View>
 
@@ -34,7 +48,7 @@ export default class Login extends Component {
             <Text style={styles.title}>Password</Text>
             <TextInput
                   style={styles.itemInput}
-                onChange={(text) => this.setState({password})}
+                  onChange={this.handlePasswordChange}
                 />
             </View>
 
